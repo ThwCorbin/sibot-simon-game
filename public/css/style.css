@@ -1,0 +1,425 @@
+/* font families */
+/* font-family: 'Ubuntu', sans-serif; */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+/* CSS Variables */
+:root {
+  --green: #8fc33a;
+  --greenBright: #c9f559;
+  --greenMedium: #1a7b34;
+  --greenSpring: #3cc37e;
+  --pink: #fe65b7;
+  --pinkBright: #ffbdbd;
+  --pinkPale: #f24c4e;
+  --violet: #8c489f;
+  --violetBright: #e6aafc;
+  --violetPale: #6c648b;
+  --violetDeep: #3f324e;
+  --blue: #4fd5d6;
+  --blueBright: #cdffff;
+  --blueGrey: #c9c9ff;
+  --greyDark: #828081;
+  --grey: #c0b3a0;
+  --beigelight: #fef7c0;
+  --yellowMustard: #ffc400;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 10px;
+  color: var(--greenMedium);
+  text-shadow: 1px 0 var(--grey);
+  background: var(--beigelight);
+  margin: 20px 0 0 0;
+}
+
+/* Top bits */
+.title {
+  color: var(--blue);
+  margin: 0;
+}
+
+.title > h1 {
+  margin: 0;
+}
+
+/* SiBot's head */
+.gameBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.topBlocks {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 160px;
+  padding: 0;
+  margin: 0;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* top: adjust to body margin-top: 20px */
+  /* ...plus title height: 24px */
+  /* ...plus .gameboard margin-top: 10px */
+  /* ...plus 1/2 .topBlocks height (160px / 2): 80px */
+  /* ...plus one .green (or .pink) border-width: 10px */
+  /* ...equals top: 144px */
+  position: absolute;
+  top: 144px;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  background: var(--blueGrey);
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px var(--violetDeep);
+  margin: 0;
+}
+
+.bottomBlocks {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 160px;
+  padding: 0;
+  margin: 0;
+}
+
+/* SiBots control system */
+.upperFace {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 100px;
+  color: var(--pinkPale);
+  text-shadow: 1px 0 var(--grey);
+  margin: 0 0 5px 0;
+}
+
+.controlStart,
+.controlStrict {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.upperFace h5 {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.start {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background: var(--blue);
+  border: 1px solid var(--violetDeep);
+  box-shadow: 1px 1px var(--violetDeep);
+  border-radius: 50%;
+  margin: 0;
+}
+
+.strict {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background: var(--violet);
+  border: 1px solid var(--violetDeep);
+  box-shadow: 1px 1px var(--violetDeep);
+  border-radius: 50%;
+}
+
+.startOn,
+.strictOn {
+  background: var(--yellowMustard);
+  border: 1px solid var(--pinkPale);
+}
+
+.lowerFace {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 1px 0 var(--grey);
+}
+
+.counter {
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px var(--pinkBright);
+  background: var(--blueBright);
+  padding: 1px;
+  border: 1px solid var(--violetDeep);
+  box-shadow: -1px -1px var(--violetDeep);
+  margin: 10px;
+}
+
+.resetText {
+  font-size: 0.75rem;
+  margin: 3px 0 0 0;
+}
+
+.resetSoulPatch {
+  width: 15px;
+  height: 15px;
+  background: var(--grey);
+  border: 1px solid var(--greyDark);
+  box-shadow: 1px 1px var(--violetDeep);
+  margin: 3px 0 0 0;
+}
+
+/* SiBot's button colors */
+.green {
+  width: 150px;
+  height: 150px;
+  background: var(--green);
+  padding: 0;
+  border: 10px solid var(--greyDark);
+  border-right: 5px;
+  border-radius: 100% 0 0 0;
+  margin: 0;
+}
+
+.greenBright {
+  background: var(--greenBright);
+}
+
+.pink {
+  width: 150px;
+  height: 150px;
+  background: var(--pink);
+  padding: 0;
+  border: 10px solid var(--greyDark);
+  border-radius: 0 100% 0 0;
+  margin: 0;
+}
+
+.pinkBright {
+  background: var(--pinkBright);
+}
+
+.violet {
+  width: 150px;
+  height: 150px;
+  background: var(--violet);
+  padding: 0;
+  border: 10px solid var(--greyDark);
+  border-radius: 0 0 0 100%;
+  border-right: 5px;
+  margin: 0;
+}
+
+.violetBright {
+  background: var(--violetBright);
+}
+
+.blue {
+  width: 150px;
+  height: 150px;
+  background: var(--blue);
+  padding: 0;
+  border: 10px solid var(--greyDark);
+  border-radius: 0 0 100% 0;
+  margin: 0;
+}
+
+.blueBright {
+  background: var(--blueBright);
+}
+
+/* SiBot body features */
+.botVNeck {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 375px;
+  z-index: -1;
+}
+
+.botVNeckLeft {
+  width: 0;
+  height: 0;
+  border-top: 50px solid var(--blueGrey);
+  border-left: 50px solid transparent;
+  box-shadow: none;
+  margin: 0;
+}
+
+.botVNeckRight {
+  width: 0;
+  height: 0;
+  border-top: 50px solid var(--blueGrey);
+  border-right: 50px solid transparent;
+  box-shadow: none;
+  margin: 0;
+}
+
+.belowBotHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botBody {
+  display: flex;
+}
+
+.botTorso {
+  width: 200px;
+  height: 150px;
+  z-index: -2;
+  background: var(--greenSpring);
+  border: 2px solid var(--grey);
+  border-radius: 0 0 50% 50%;
+  margin: 0;
+}
+
+.botArmLeft,
+.botArmRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  width: 30px;
+  height: 100px;
+  background: var(--blueGrey);
+  border: 2px solid var(--grey);
+  border-radius: 50% 0 25% 0;
+  margin: 0;
+}
+
+.botArmRight {
+  border-radius: 0 50% 0 25%;
+}
+
+.tattooCode {
+  color: var(--greenMedium);
+}
+
+.tattooHtml {
+  color: var(--pinkPale);
+}
+
+.tattooCss {
+  color: var(--green);
+}
+.tattooJs {
+  color: var(--violet);
+}
+
+.botJersey {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 430px;
+  text-align: center;
+}
+
+.botJerseyNumber {
+  color: var(--yellowMustard);
+  text-shadow: 1px 1px var(--violet);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.botJerseyText {
+  color: var(--greenSpring);
+  text-shadow: 1px 1px var(--greenSpring);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.botJerseyTextOn {
+  color: var(--yellowMustard);
+  text-shadow: 1px 1px var(--violet);
+}
+
+.botBelt {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 508px;
+  z-index: 1;
+}
+
+.botBeltLeft,
+.botBeltRight {
+  width: 13px;
+  height: 9px;
+  background: var(--greyDark);
+  margin: 0;
+}
+
+.botBeltBuckle {
+  width: 40px;
+  height: 20px;
+  color: var(--violet);
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: none;
+  background: var(--yellowMustard);
+  padding: 5px;
+  border: 1px solid var(--violet);
+  box-shadow: 1px 1px var(--blueBright);
+  border-radius: 50%;
+  margin: 0;
+}
+
+.botLegs {
+  display: flex;
+  justify-content: center;
+}
+
+.botLegLeft,
+.botLegRight {
+  width: 35px;
+  height: 50px;
+  background: var(--pink);
+  border: 2px solid var(--grey);
+  border-radius: 0 0 50% 0;
+  margin: 0;
+}
+
+.botLegRight {
+  border-radius: 0 0 0 50%;
+}
+
+/* Closing remarks */
+.closingRemarks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 575px;
+}
+
+.myMark {
+  color: var(--blue);
+  text-shadow: none;
+  margin: 10px 0;
+}
+
+.apologies {
+  color: var(--greenSpring);
+  text-shadow: none;
+  text-align: center;
+  margin: 0 0 5px 0;
+}

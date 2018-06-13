@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Simon Game</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!--  make sure "<script...fontawesome.com...and axios"  (if needed) lines from above are included in codepen-->
+
+<body>
+    <!--  paste below this line until similar note at bottom into codepen-->
+
+    <div class="title">
+        <h1>SiBot is a pale reflection of life</h1>
+    </div>
+    <div class="gameBoard">
+        <div class="topBlocks">
+            <h1 class="green"></h1>
+            <h1 class="pink"></h1>
+        </div>
+        <div class="middle">
+            <div class="upperFace">
+                <div class="controlStart">
+                    <h5>Start</h5>
+                    <h5 class="start"></h5>
+                </div>
+                <div class="controlStrict">
+                    <h5>Strict</h5>
+                    <h5 class="strict"></h5>
+                </div>
+            </div>
+            <div class="lowerFace">
+                <h5 class="counter">--</h5>
+                <h5 class="resetText">Reset</h5>
+                <h5 class="resetSoulPatch"></h5>
+            </div>
+        </div>
+        <div class="bottomBlocks">
+            <h1 class="violet"></h1>
+            <h1 class="blue"></h1>
+        </div>
+    </div>
+    <div class="botVNeck">
+        <h1 class="botVNeckLeft"></h1>
+        <h1 class="botVNeckRight"></h1>
+    </div>
+    <div class="belowBotHead">
+        <div class="botBody">
+            <h1 class="botArmLeft">
+                <i class="fas fa-code tattooCode"></i>
+            </h1>
+            <h1 class="botTorso"></h1>
+            <h1 class="botArmRight">
+                <i class="fab fa-html5 tattooHtml"></i>
+                <i class="fab fa-css3 tattooCss"></i>
+                <i class="fab fa-js-square tattooJs"></i>
+            </h1>
+        </div>
+    </div>
+    <div class="botJersey">
+        <h5 class="botJerseyNumber">20</h5>
+        <h5 class="botJerseyText">Game is active</h5>
+    </div>
+    <div class="botBelt">
+        <h5 class="botBeltLeft"></h5>
+        <h5 class="botBeltBuckle">5/20</h5>
+        <h5 class="botBeltRight"></h5>
+    </div>
+    <div class="botLegs ">
+        <h1 class="botLegLeft "></h1>
+        <h1 class="botLegRight "></h1>
+    </div>
+    </div>
+    <div class="closingRemarks ">
+        <h1 class="myMark ">An app from Tom Corbin*</h1>
+        <h5 class="apologies ">*With apologies to Simon™, Ralph H Baer, Howard J Morrison,
+            <br>Lenny Cope, and Douglass P Montague.</h5>
+    </div>
+
+    <audio class="soundGreen" preload="auto" src="https://raw.githubusercontent.com/NiceDrop/portfolio/master/audio/siBot02.ogg"></audio>
+    <audio class="soundPink" preload="auto" src="https://raw.githubusercontent.com/NiceDrop/portfolio/master/audio/siBot01.ogg"></audio>
+    <audio class="soundViolet" preload="auto" src="https://raw.githubusercontent.com/NiceDrop/portfolio/master/audio/siBot03.ogg"></audio>
+    <audio class="soundBlue" preload="auto" src="https://raw.githubusercontent.com/NiceDrop/portfolio/master/audio/siBot04.ogg"></audio>
+    <!-- Sounds above derived from Simon Says.flac (https://freesound.org/people/Timbre/sounds/171398/) by Timbre and Freesound.org, CC BY-NC 3.0 (https://creativecommons.org/licenses/by-nc/3.0/)  -->
+
+    <!-- paste everything above this line jnto codepen-->
+    <!-- alternative sounds -->
+    <!-- https://s3.amazonaws.com/freecodecamp/simonSound1.mp3
+      https://s3.amazonaws.com/freecodecamp/simonSound2.mp3
+      https://s3.amazonaws.com/freecodecamp/simonSound3.mp3
+      https://s3.amazonaws.com/freecodecamp/simonSound4.mp3 -->
+
+    <script type="text/javascript " src="script.js "></script>
+</body>
+
+</html>
+
+<!-- Older version -->
+<!-- 
+<div class="title">
+    <h1>SiBot is a pale reflection of life</h1>
+</div>
+<div class="gameBoard">
+    <div class="topBlocks">
+        <h1 class="green"></h1>
+        <h1 class="pink"></h1>
+    </div>
+    <div class="middle">
+        <div class="upperFace">
+            <div class="controlStart">
+                <h5>Start</h5>
+                <h5 class="start"></h5>
+            </div>
+            <div class="controlStrict">
+                <h5>Strict</h5>
+                <h5 class="strict"></h5>
+            </div>
+        </div>
+        <div class="lowerFace">
+            <h5 class="counter">--</h5>
+            <h5 class="resetText">Reset</h5>
+            <h5 class="resetSoulPatch"></h5>
+        </div>
+    </div>
+    <div class="bottomBlocks">
+        <h1 class="violet"></h1>
+        <h1 class="blue"></h1>
+    </div>
+</div>
+<div class="botVNeck">
+    <h1 class="botVNeckLeft"></h1>
+    <h1 class="botVNeckRight"></h1>
+</div>
+<div class="belowBotHead">
+    <div class="botBody">
+        <h1 class="botArmLeft">
+            <i class="fas fa-code tattooCode"></i>
+        </h1>
+        <h1 class="botTorso"></h1>
+        <h1 class="botArmRight">
+            <i class="fab fa-html5 tattooHtml"></i>
+            <i class="fab fa-css3 tattooCss"></i>
+            <i class="fab fa-js-square tattooJs"></i>
+        </h1>
+    </div>
+</div>
+<div class="botJersey">
+    <h5 class="botJerseyNumber">20</h5>
+    <h5 class="botJerseyText">Game is active</h5>
+</div>
+<div class="botBelt">
+    <h5 class="botBeltLeft"></h5>
+    <h5 class="botBeltBuckle">5/20</h5>
+    <h5 class="botBeltRight"></h5>
+</div>
+<div class="botLegs ">
+    <h1 class="botLegLeft "></h1>
+    <h1 class="botLegRight "></h1>
+</div>
+</div>
+<div class="closingRemarks ">
+    <h1 class="myMark ">An app from Tom Corbin*</h1>
+    <h5 class="apologies ">*With apologies to Simon™, Ralph H Baer, Howard J Morrison,
+        <br>Lenny Cope, and Douglass P Montague.</h5>
+</div> -->

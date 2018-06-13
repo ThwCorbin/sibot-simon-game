@@ -1,0 +1,19 @@
+{
+  "name": "sibot",
+  "version": "1.0.0",
+  "description": "Sibot Simon Game",
+  "main": "script.js",
+  "dependencies": {
+    "eslint": "^4.18.2",
+    "eslint-g": "^1.3.3"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Corbin",
+  "license": "ISC"
+}
